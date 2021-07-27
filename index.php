@@ -81,13 +81,13 @@
 <body>
   
     <header class="border-bottom">
-        <div class="my_container">
-            <div class="row">
-                <div class="col-6 d-flex">
-                    <img class="" src="img/Google-Logo.png" alt="">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-6 d-flex pt-3 ps-4">
+                    <img class="me-2" src="img/Google-Logo.png" alt="">
                     <h5 class="text-secondary fw-bold mt-1 fs-4">Privacy e termini</h5>
                 </div>
-                <div class="col-6 d-flex justify-content-end text-secondary">
+                <div class="col-6 d-flex justify-content-end text-secondary pt-4 pe-4">
                     <i class="fas fa-th fs-4"></i>
                     <i class="fas fa-user-circle ms-3  fs-3"></i>
                 </div>
