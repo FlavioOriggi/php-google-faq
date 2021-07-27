@@ -25,20 +25,24 @@
         [
             "ask" => "Perché il mio account è associato a un paese?",
             "answer" => "Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:
+            
             <ol>
+            <br>
                 <li> La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:<br>
                     <ul>
-                        <li>Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.<\li>
-                        <li>Google LLC, con sede negli Stati Uniti, per il resto del mondo.<\li>
-                    <\ul>
-                <\li>
-                <li>La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.<\li>                        
-            <\ol> <br>
-            <br>
+                        <br>
+                        <li>Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.</li>
+                        <li>Google LLC, con sede negli Stati Uniti, per il resto del mondo.</li>
+                    </ul>
+                </li>
+                <br>
+                <li>La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.</li>                        
+            </ol>
+            
             Tieni presente che i servizi Google sono fondamentalmente gli stessi a prescindere dalla società consociata che li offre o dal paese a cui è associato il tuo account.<br>
-            <br>
-            <p>Stabilire il paese associato al tuo account<\p><br>
-            <br>
+            <br>",
+            "ask2" => "Stabilire il paese associato al tuo account",
+            "answer2" => "            
             Quando crei un nuovo Account Google, lo associamo a un paese in base a dove è stato creato. Per quanto riguarda gli account creati almeno un anno fa, usiamo il paese da cui accedi solitamente ai servizi Google, in genere i servizi in cui hai trascorso più tempo nell'ultimo anno.<br>
             <br>
             I viaggi frequenti solitamente non influiscono sul paese associato al tuo account. Se ti trasferisci in un altro paese, potrebbe occorrere circa un anno per aggiornare l'associazione del paese.<br>
@@ -70,32 +74,36 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
   
     <header class="border-bottom">
-        <div class="row">
-            <div class="col-6 d-flex px-4 py-3 ">
-                <img class="me-2" src="img/Google-Logo.png" alt="">
-                <h5 class="text-secondary fw-bold mt-1 fs-4">Privacy e termini</h5>
-            </div>
-            <div class="col-6 d-flex justify-content-end px-5 pt-4 text-secondary">
-                <i class="fas fa-th fs-4"></i>
-                <i class="fas fa-user-circle ms-3  fs-3"></i>
-            </div>
-        </div>        
-        <div class="row">
-            <nav class="col-5 px-3">
-                <ul class="list-unstyled d-flex px-2">
-                    <li class="text-secondary ms-2 me-4 fw-bold fs-6">Introduzione</li>
-                    <li class="text-secondary mx-4 fw-bold fs-6">Norme sulla privacy</li>
-                    <li class="text-secondary mx-4 fw-bold fs-6">Termini di servizio</li>
-                    <li class="text-secondary mx-4 fw-bold fs-6">Tecnologie</li>
-                    <li class="text-primary ms-4 fw-bold fs-6">Domande frequenti</li>
-                </ul>                             
-            </nav>
-            <div class="col-7">
+        <div class="my_container">
+            <div class="row">
+                <div class="col-6 d-flex">
+                    <img class="" src="img/Google-Logo.png" alt="">
+                    <h5 class="text-secondary fw-bold mt-1 fs-4">Privacy e termini</h5>
+                </div>
+                <div class="col-6 d-flex justify-content-end text-secondary">
+                    <i class="fas fa-th fs-4"></i>
+                    <i class="fas fa-user-circle ms-3  fs-3"></i>
+                </div>
+            </div>        
+            <div class="row">
+                <nav class="col-5">
+                    <ul class="list-unstyled d-flex px-2">
+                        <li class="text-secondary ms-2 me-4 fw-bold fs-6">Introduzione</li>
+                        <li class="text-secondary mx-4 fw-bold fs-6">Norme sulla privacy</li>
+                        <li class="text-secondary mx-4 fw-bold fs-6">Termini di servizio</li>
+                        <li class="text-secondary mx-4 fw-bold fs-6">Tecnologie</li>
+                        <li class="text-primary ms-4 fw-bold fs-6">Domande frequenti</li>
+                    </ul>                             
+                </nav>
+                <div class="col-7">
+                </div>
             </div>
         </div>
     </header>
@@ -105,8 +113,10 @@
             <div class="row">
                 <div class="col pt-5 text-secondary">
                     <?php for($i = 0; $i<$faqArray; $i++) { ?>
-                        <h5 class="fw-bold pt-5 pb-1"><?php echo $faq[$i]['ask']?></h5>
-                        <span class="pb-4"><?php echo $faq[$i]['answer']?></span>                        
+                        <h4 class="fw-bold pt-5 pb-1"><?php echo $faq[$i]['ask']?></h4>
+                        <span class="pb-4"><?php echo $faq[$i]['answer']?></span>
+                        <p class="fw-bold"><?php echo $faq[$i]['ask2']?></p>                        
+                        <span class="pb-4"><?php echo $faq[$i]['answer2']?></span>                       
                     <?php } ?>
                 </div>
             </div>
